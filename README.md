@@ -16,6 +16,9 @@
 
 ### System requirements
 ````
+✅ My account should start with £0 balance
+````
+````
 ⿴ My account should never go into negative balance
 ````
 ````
