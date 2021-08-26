@@ -11,7 +11,10 @@
 ✅ As a user I want to be able to make a deposit
 ````
 ````
-⿴ As a user I want to be able to withdraw money from my account
+✅ As a user I want to be able to withdraw money from my account
+````
+````
+⿴ As a user I want to be able to generate a statement of my transactions
 ````
 
 ### System requirements
