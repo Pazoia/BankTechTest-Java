@@ -11,4 +11,12 @@ public class BankAccountTest {
         int balance = bankAccount.balance;
         assertEquals(0, balance);
     }
+
+    @Test
+    @DisplayName("As a user I want to be able to make a deposit")
+    void bankAccountAcceptsDeposits() {
+        BankAccount bankAccount = new BankAccount();
+        int balance = bankAccount.deposit(1000);
+        assertEquals(1000, balance);
+    }
 }
