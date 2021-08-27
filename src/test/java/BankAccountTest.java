@@ -15,22 +15,20 @@ public class BankAccountTest {
     @Test
     @DisplayName("Bank Account starts with £0 balance")
     void bankAccountStartsWithZeroBalance() {
-        int balance = bankAccount.balance;
-        assertEquals(0, balance);
+        assertEquals(0, bankAccount.transactions.size());
     }
 
     @Test
     @DisplayName("As a user I want to be able to make a deposit")
     void bankAccountAcceptsDeposits() {
-        int balance = bankAccount.deposit(1000);
-        assertEquals(1000, balance);
+        bankAccount.deposit(1000);
+        assertEquals(1000, bankAccount.transactions.get(0));
     }
 
     @Test
     @DisplayName("As a user I want to be able to withdraw money from my account")
     void bankAccountAllowsForMoneyToBeWithdrawn() {
-        bankAccount.deposit(1000);
-        int balance = bankAccount.withdraw(500);
-        assertEquals(500, balance);
+        bankAccount.withdraw(500);
+        assertEquals(500, bankAccount.transactions.get(0));
     }
 }

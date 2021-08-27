@@ -1,11 +1,13 @@
-public class BankAccount {
-    int balance = 0;
+import java.util.ArrayList;
 
-    int deposit(int valueToDeposit) {
-        return balance += valueToDeposit;
+public class BankAccount {
+    ArrayList<Integer> transactions = new ArrayList<Integer>();
+
+    void deposit(int valueToDeposit) {
+        transactions.add(valueToDeposit);
     }
 
-    int withdraw(int valueToWithdraw) {
-        return balance -= valueToWithdraw;
+    void withdraw(int valueToWithdraw) {
+        transactions.add(valueToWithdraw);
     }
 }
